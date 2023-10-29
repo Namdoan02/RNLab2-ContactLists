@@ -1,5 +1,5 @@
 import'react-native-get-random-values';
-import {} from 'uuid';
+import {v4} from 'uuid';
 
 const mapContact = contact =>{
     const {
@@ -23,7 +23,7 @@ const fetchContacts = async()=>{
 };
 const fetchUserContact = async ()=>{
     const response = await fetch('https://randomuser.me/api/?seed=fullstackio');
-    const contactData = await response.json();
+    const userData = await response.json();
     return mapContact(userData.results[0]);
 };
 const fetchRandomContact = async ()=>{

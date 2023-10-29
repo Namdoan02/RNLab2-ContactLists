@@ -9,17 +9,18 @@ const ContactListItem =({
 })=>
 {
     return(
-        <TouchableHighlight underlayColor={colors.grey}
-        style={style.container}
+        <TouchableHighlight 
+        underlayColor={colors.grey}
+        style={styles.container}
         onPress={onPress}>
-            <View style={style.contactInfo}>
-                <Image style={style.avatar}
+            <View style={styles.contactInfo}>
+                <Image style={styles.avatar}
                 source={{
                     uri: avatar,
                 }}></Image>
-                <View style={style.details}>
-                    <Text style={[style.title]}>{name}</Text>
-                    <Text style={[style.subtitle]}>{phone}</Text>
+                <View style={styles.details}>
+                    <Text style={[styles.title]}>{name}</Text>
+                    <Text style={[styles.subtitle]}>{phone}</Text>
                 </View>
             </View>
         </TouchableHighlight>
@@ -27,13 +28,13 @@ const ContactListItem =({
 }
 export default ContactListItem;
 
-ContactListItem.PropTypes={
+ContactListItem.propTypes={
     name: PropTypes.string,
     avatar: PropTypes.string,
     phone: PropTypes.string,
     onPress: PropTypes.func,
 };
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         paddingLeft:24,
     },
@@ -42,6 +43,7 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingTop: 16,
+        paddingBottom: 16,
         paddingRight:24,
         borderBottomColor: colors.grey,
         borderBottomWidth: StyleSheet.hairlineWidth,

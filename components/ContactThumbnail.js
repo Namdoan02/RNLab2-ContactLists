@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
-import Icon from "react-native-vector-icon/MaterialIcons";
+import Icon from "react-native-vector-icons/MaterialIcons";
 import PropTypes from "prop-types";
 
 const ContactsThumbnail=({name,phone,avatar,textColor,onPress,})=>

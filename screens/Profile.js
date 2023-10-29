@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import {fetchRandomContact} from '../utils/api';
 import ContactThumbnail from '../components/ContactThumbnail';
 import DetailListItem from '../components/DetailListItem';
-import color from '../utils/colors';
+import colors from '../utils/colors';
 
 const Profile = ({ route }) => {
     const contact = route.params;
@@ -26,20 +26,19 @@ const Profile = ({ route }) => {
     );
   };
   
-  export default Profile;
-  
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
       flex: 1,
     },
     avatarSection: {
       flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
+      alignItems: 'center',
+      justifyContent: 'center',
       backgroundColor: colors.blue,
     },
     detailsSection: {
       flex: 1,
-      backgroundColor: "white",
+      backgroundColor: 'white',
     },
-  });
+});
+export default Profile;

@@ -13,7 +13,7 @@ import {
   fetchContactsLoading,
   fetchContactsSuccess,
   fetchContactsError,
-} from "../utils/store";
+} from "../store";
 
 const keyExtractor = ({ phone }) => phone;
 
@@ -38,7 +38,7 @@ const Favorites = ({ navigation }) => {
     return (
       <ContactThumbnail
         avatar={avatar}
-        onPress={() => navigation.navigate("Profile", { contact: item })}
+        onPress={() => navigation.navigate('Profile', { contact: item })}
       />
     );
   };
@@ -64,7 +64,7 @@ const Favorites = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
     justifyContent: "center",
     flex: 1,
   },

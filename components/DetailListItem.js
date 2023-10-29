@@ -12,10 +12,10 @@ const DetailListItem = ({ icon, title, subtitle }) => {
           <Icon
             name={icon}
             size={24}
-            style={{ color: colors.black, marginRight: 20 }}
+            style={{ color: colors.black, marginRight: 20, }}
           />
         )}
-        <View style={styles.content}>
+        <View style={styles.contentContainer}>
           <Text style={styles.title}>{title}</Text>
           {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
         </View>
@@ -23,10 +23,11 @@ const DetailListItem = ({ icon, title, subtitle }) => {
     </View>
   );
 };
+export default DetailListItem;
 
 DetailListItem.propTypes = {
-  icon: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  title: PropTypes.string,
   subtitle: PropTypes.string,
 };
 
@@ -42,10 +43,14 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.grey,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  content: {
-    flexDirection: "row",
+  container:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+  },
+  contentContainer: {
+    justifyContent: 'center',
     flex: 1,
-    alignItems: "center",
   },
   title: {
     color: colors.black,
@@ -58,4 +63,4 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
-export default DetailListItem;
+

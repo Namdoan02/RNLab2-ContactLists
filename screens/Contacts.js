@@ -8,7 +8,7 @@ import {
   fetchContactsLoading,
   fetchContactsSuccess,
   fetchContactsError,
-} from "../utils/store";
+} from "../store";
 
 const Contacts = ({ navigation }) => {
   const { loading, error, contacts } = useSelector((state) => state);
@@ -32,14 +32,12 @@ const Contacts = ({ navigation }) => {
 
   const renderContact = ({ item }) => {
     const { name, avatar, phone } = item;
-    return (
-      <ContactListItem
+    return <ContactListItem
         name={name}
         avatar={avatar}
         phone={phone}
         onPress={() => navigation.navigate("Profile", { contact: item })}
-      />
-    );
+      />;
   };
 
   return (
@@ -58,7 +56,7 @@ const Contacts = ({ navigation }) => {
       )}
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
