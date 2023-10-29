@@ -6,10 +6,11 @@ import DetailListItem from '../components/DetailListItem';
 import colors from '../utils/colors';
 
 const Profile = ({ route }) => {
-    const contact = route.params;
-    useEffect(() => {
-      fetchRandomContact().then((contact) => setContact(contact));
-    }, []);
+    console.log (route.params) ;
+    const{contact}=route.params;
+    //useEffect(() => {
+      //fetchRandomContact().then((contact) => setContact(contact));
+    //}, []);
     const { avatar, name, email, phone, cell } = contact;
   
     return (
@@ -26,6 +27,8 @@ const Profile = ({ route }) => {
     );
   };
   
+export default Profile;
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -41,4 +44,3 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
     },
 });
-export default Profile;

@@ -57,7 +57,7 @@ const Contacts = ({ navigation }) => {
     </View>
   );
 }
-
+export default Contacts;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-export default Contacts;
+

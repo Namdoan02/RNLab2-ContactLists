@@ -33,7 +33,7 @@ const User = () => {
     </View>
   );
 };
-
+export default User;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-export default User;
+

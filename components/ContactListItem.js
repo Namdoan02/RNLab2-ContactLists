@@ -14,18 +14,15 @@ const ContactListItem =({
         style={styles.container}
         onPress={onPress}>
             <View style={styles.contactInfo}>
-                <Image style={styles.avatar}
-                source={{
-                    uri: avatar,
-                }}></Image>
+                <Image style={styles.avatar} source={{ uri: avatar,}}/>
                 <View style={styles.details}>
-                    <Text style={[styles.title]}>{name}</Text>
-                    <Text style={[styles.subtitle]}>{phone}</Text>
+                    <Text style={styles.title}>{name}</Text>
+                    <Text style={styles.subtitle}>{phone}</Text>
                 </View>
             </View>
         </TouchableHighlight>
     );
-}
+};
 export default ContactListItem;
 
 ContactListItem.propTypes={

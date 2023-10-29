@@ -18,7 +18,7 @@ import {
 const keyExtractor = ({ phone }) => phone;
 
 const Favorites = ({ navigation }) => {
-  const { error,contacts,loading } = useSelector((state) => state);
+  const { loading,error,contacts } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const Favorites = ({ navigation }) => {
     </View>
   );
 };
-
+export default Favorites;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Favorites;
+

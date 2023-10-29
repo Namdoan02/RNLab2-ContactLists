@@ -2,17 +2,19 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Icon from "react-native-vector-icons/MaterialIcons";
 import PropTypes from "prop-types";
+import { Image } from "react-native";
+import { Text } from "react-native";
 
 const ContactsThumbnail=({name,phone,avatar,textColor,onPress,})=>
 {
     const colorStyle={
         color: textColor,
     };
-    const ImageComponent=onPress? TouchableOpacity: View;
+    const ImageComponent=onPress ? TouchableOpacity: View;
     return(
         <View style={styles.container}>
             <ImageComponent onPress={onPress}>
-                <Image source={{uri:avatar,}}style={styles.avatar}></Image>
+                <Image source={{uri:avatar,}}style={styles.avatar}/>
 
             </ImageComponent>
             {name !=='' && <Text style={[styles.name, colorStyle]}>{name}</Text>}
