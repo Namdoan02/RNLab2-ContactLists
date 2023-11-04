@@ -4,6 +4,7 @@ import {fetchRandomContact} from '../utils/api';
 import ContactThumbnail from '../components/ContactThumbnail';
 import DetailListItem from '../components/DetailListItem';
 import colors from '../utils/colors';
+import { View } from "react-native";
 
 const Profile = ({ route }) => {
     console.log (route.params) ;
